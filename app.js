@@ -12,12 +12,12 @@ enableEthereumButton.onclick = async () => {
 
 ethSupplyButton.onclick = async () => {
   const amount = +ethSupplyInput.value;
-  await supply(Compound.ETH, amount);
+  await stake(Compound.ETH, amount);
 };
 
 ethRedeemButton.onclick = async () => {
   const amount = +ethRedeemInput.value;
-  await redeem(Compound.cETH, amount);
+  await unstake(Compound.cETH, amount);
 };
 
 async function stake(asset, amount) {
